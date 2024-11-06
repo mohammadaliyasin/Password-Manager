@@ -15,11 +15,15 @@ class _HomeState extends State<Home> {
       backgroundColor: const Color(0xff10111C),
       appBar: AppBar(
         backgroundColor: const Color(0xff10111C),
-        title: Text('Password Manager',style: GoogleFonts.outfit(),),
+        title: Text(
+          'Password Manager',
+          style: GoogleFonts.outfit(),
+        ),
         centerTitle: true,
-
       ),
 
+      bottomNavigationBar: const BottomAppBar(color: Color(0xff205BFF),),
+      
     );
   }
 }

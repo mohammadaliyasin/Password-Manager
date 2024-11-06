@@ -18,19 +18,48 @@ class Walkthrough extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          SizedBox(
-            height: 60.h,
-          ),
-          Center(
-            child: Icon(
-              Icons.lock_outline,
-              color: Colors.blue,
-              size: 200.r,
+      body: Padding(
+        padding: EdgeInsets.all(12.0.r),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            SizedBox(
+              height: 60.h,
             ),
-          ),
-        ],
+            Center(
+              child: Icon(
+                Icons.lock_outline,
+                color: const Color(0xff205BFF),
+                size: 200.r,
+              ),
+            ),
+            SizedBox(
+              height: 60.h,
+            ),
+            Text(
+              'All your passwords in one\nsecure place',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.outfit(color: Colors.white, fontSize: 22.sp),
+            ),
+            SizedBox(
+              height: 50.h,
+              width: 340.w,
+              child: ElevatedButton(
+                onPressed: () {},
+                style: const ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(
+                    Color(0xff205BFF),
+                  ),
+                ),
+                child: Text(
+                  'Get Started',
+                  style: GoogleFonts.outfit(
+                      color: Colors.white, fontWeight: FontWeight.w600),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
