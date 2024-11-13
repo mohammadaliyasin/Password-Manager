@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:password_manager/Screens/Home.dart';
 import 'package:password_manager/Screens/Walkthrough.dart';
+import 'package:password_manager/Screens/passwordGenerator.dart';
 import 'package:password_manager/firebase_options.dart';
 
 void main() async {
@@ -15,7 +16,9 @@ void main() async {
     DeviceOrientation.portraitUp,
     DeviceOrientation.portraitDown,
   ]).then((_) {
-    runApp(const MyApp());
+    runApp(
+      const MyApp(),
+    );
   });
 }
 
@@ -28,7 +31,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 690),
       minTextAdapt: true,
       splitScreenMode: true,
-      builder: (_ , child) {
+      builder: (_, child) {
         return MaterialApp(
           debugShowCheckedModeBanner: false,
           title: 'First Method',
@@ -39,7 +42,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: const Home(),
+      child: PasswordGeneratorScreen(),
     );
   }
 }

@@ -5,16 +5,16 @@ import 'package:password_manager/main.dart';
 
 class Walkthrough extends StatelessWidget {
   const Walkthrough({super.key});
-
+ 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {    
     return Scaffold(
       backgroundColor: const Color(0xff10111C),
       appBar: AppBar(
         backgroundColor: const Color(0xff10111C),
         title: Text(
           'Password Manager',
-          style: GoogleFonts.outfit(color: Colors.white),
+          style: GoogleFonts.outfit(color: Colors.white,),
         ),
         centerTitle: true,
       ),
