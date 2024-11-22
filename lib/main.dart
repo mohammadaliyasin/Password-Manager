@@ -1,11 +1,14 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:password_manager/Screens/Home.dart';
 import 'package:password_manager/Screens/Walkthrough.dart';
+import 'package:password_manager/Screens/addPasswordScreen.dart';
 import 'package:password_manager/Screens/passwordGenerator.dart';
 import 'package:password_manager/firebase_options.dart';
+import 'Screens/auth/authscreen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -42,7 +45,19 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: PasswordGeneratorScreen(),
+      child: StreamBuilder(
+        stream: FirebaseAuth.instance.authStateChanges(),
+        builder: (context, usersnapshot) {
+          if (usersnapshot.connectionState == ConnectionState.waiting) {
+            return const CircularProgressIndicator();
+          }
+          if (usersnapshot.hasData) {
+            return Home();
+          } else {
+            return const AuthScreen();
+          }
+        },
+      ),
     );
   }
 }

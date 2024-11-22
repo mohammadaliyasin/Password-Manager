@@ -130,7 +130,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
             CheckboxListTile(
               activeColor: const Color(0xff205BFF),
               title: Text(
-                'Include Uppercase Letters',
+                'Uppercase letters (A-Z)',
                 style: GoogleFonts.outfit(color: Colors.white,fontSize: 16.sp),
               ),
               value: _includeUppercase,
@@ -143,7 +143,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
             CheckboxListTile(
               activeColor: const Color(0xff205BFF),
               title: Text(
-                'Include Lowercase Letters',
+                'Lowercase letters (a-z)',
                 style: GoogleFonts.outfit(color: Colors.white,fontSize: 16.sp),
               ),
               value: _includeLowercase,
@@ -156,7 +156,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
             CheckboxListTile(
               activeColor: const Color(0xff205BFF),
               title: Text(
-                'Include Numbers',
+                'Numbers (0-9)',
                 style: GoogleFonts.outfit(color: Colors.white,fontSize: 16.sp),
               ),
               value: _includeNumbers,
@@ -169,7 +169,7 @@ class _PasswordGeneratorScreenState extends State<PasswordGeneratorScreen> {
             CheckboxListTile(
               activeColor: const Color(0xff205BFF),
               title: Text(
-                'Include Symbols',
+                'Symbols',
                 style: GoogleFonts.outfit(color: Colors.white,fontSize: 16.sp),
               ),
               value: _includeSymbols,
